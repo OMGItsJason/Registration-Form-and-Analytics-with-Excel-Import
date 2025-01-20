@@ -1,6 +1,6 @@
 import z from 'zod';
 
-export const form = z.object({
+export const FormSchema = z.object({
 	name: z.string().nonempty(),
 	gender: z.string().nonempty(),
 	age: z.number().int().positive(),
@@ -8,4 +8,4 @@ export const form = z.object({
 	phone: z.number().int().positive()
 });
 
-export type Form = z.infer<typeof form>;
+export type FormSchema = z.infer<typeof FormSchema>;
