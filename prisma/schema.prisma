@@ -1,4 +1,4 @@
-// Test Two
+// Test Three
 generator client {
   provider = "prisma-client-js"
 }
@@ -15,7 +15,7 @@ model Records {
   lastName   String
   gender     String
   email      String
-  phone      Int
+  phone      BigInt
   age        Int
   address    String
   createdAt  DateTime @default(now())
