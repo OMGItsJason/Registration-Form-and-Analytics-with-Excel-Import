@@ -7,12 +7,7 @@ export const FormSchema = z.object({
 	gender: z.string().nonempty(),
 	age: z.number().int().positive(),
 	email: z.string().email(),
-	phone: z
-		.number()
-		.refine(
-			(num: number) => num.toString().startsWith('09') && num.toString().length === 11,
-			"Mobile number must be 11 digits and start with '09'"
-		),
+	phone: z.number().int().positive(),
 	address: z.string().nonempty()
 });
 
